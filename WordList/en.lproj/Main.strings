@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2UC-1q-e22"; */
+"2UC-1q-e22.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "一覧"; ObjectID = "36M-iy-9aZ"; */
+"36M-iy-9aZ.title" = "一覧";
+
+/* Class = "UIBarButtonItem"; title = "もどる"; ObjectID = "3iM-FJ-gyQ"; */
+"3iM-FJ-gyQ.title" = "もどる";
+
+/* Class = "UINavigationItem"; title = "新規追加"; ObjectID = "LV9-70-Bjx"; */
+"LV9-70-Bjx.title" = "新規追加";
+
+/* Class = "UIButton"; normalTitle = "START"; ObjectID = "c3f-GZ-YzH"; */
+"c3f-GZ-YzH.normalTitle" = "START";
+
+/* Class = "UIButton"; normalTitle = "単語一覧"; ObjectID = "e3d-c3-HWt"; */
+"e3d-c3-HWt.normalTitle" = "単語一覧";
+
+/* Class = "UIButton"; normalTitle = "答えを表示"; ObjectID = "fUc-eD-amv"; */
+"fUc-eD-amv.normalTitle" = "答えを表示";
+
+/* Class = "UILabel"; text = "問題"; ObjectID = "rvZ-dE-U9B"; */
+"rvZ-dE-U9B.text" = "問題";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "sqI-23-ob2"; */
+"sqI-23-ob2.text" = "Label";
+
+/* Class = "UILabel"; text = "英語"; ObjectID = "tKp-x8-N7G"; */
+"tKp-x8-N7G.text" = "英語";
+
+/* Class = "UIButton"; normalTitle = "トップに戻る"; ObjectID = "tP1-8s-9g0"; */
+"tP1-8s-9g0.normalTitle" = "トップに戻る";
+
+/* Class = "UILabel"; text = "日本語"; ObjectID = "wrp-7k-gzx"; */
+"wrp-7k-gzx.text" = "日本語";
