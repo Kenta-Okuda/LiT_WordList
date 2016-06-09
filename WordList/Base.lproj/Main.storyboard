@@ -78,7 +78,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="一覧" id="36M-iy-9aZ">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="3iM-FJ-gyQ"/>
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="3iM-FJ-gyQ">
+                            <connections>
+                                <segue destination="Jt0-pt-sNf" kind="unwind" unwindAction="back:" id="kyK-1o-qRh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="F6c-BS-shF">
                             <connections>
                                 <segue destination="BE1-hA-NEx" kind="push" id="3oR-VP-6Rg"/>
@@ -88,6 +92,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3f-Nf-IO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Jt0-pt-sNf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="764.5" y="1127.5"/>
         </scene>
@@ -130,10 +135,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="新規追加" id="LV9-70-Bjx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yqR-KD-sSK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yqR-KD-sSK">
+                            <connections>
+                                <action selector="saveWord" destination="BE1-hA-NEx" id="Ixu-WG-Upg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="englishTextField" destination="p0a-m4-PpN" id="dbc-8U-nbP"/>
+                        <outlet property="japaneseTextField" destination="MoD-C0-kgV" id="7xG-qF-b5H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTX-AR-Ikd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,10 +202,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.28369564619999998" green="0.57963841620000001" blue="0.31206090780000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.28235294117647058" green="0.58039215686274503" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="answerLabel" destination="sqI-23-ob2" id="ZoW-lV-9G1"/>
+                        <outlet property="nextButton" destination="fUc-eD-amv" id="Ghp-hF-GgB"/>
+                        <outlet property="questionLabel" destination="2UC-1q-e22" id="a1F-3h-zcb"/>
                         <segue destination="ogN-Mg-QQj" kind="modal" identifier="toFinishView" id="bac-mH-34Y"/>
                     </connections>
                 </viewController>

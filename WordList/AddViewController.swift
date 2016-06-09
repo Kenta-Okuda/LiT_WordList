@@ -10,8 +10,8 @@ import UIKit
 
 class AddViewController: UIViewController {
 
-    @IBOutlet var englishTextField: UITextView!
-    @IBOutlet var japaneseTextField: UITextView!
+    @IBOutlet var englishTextField: UITextField!
+    @IBOutlet var japaneseTextField: UITextField!
     
     var wordArray: [AnyObject] = []
     let saveData = NSUserDefaults.standardUserDefaults()
@@ -29,17 +29,23 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func saveWord() {
-        let wordDictionary = ["english":englishTextField.text, "japanese":japaneseTextField.text]
+        if englishTextField.text == "" || japaneseTextField.text == "" {
+            let alert = UIAlertController(title: "入力エラー", message: "全ての欄に入力してください", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            let wordDictionary = ["english": englishTextField.text!, "japanese": japaneseTextField.text!]
         
-        wordArray.append(wordDictionary)
-        saveData.setObject(wordArray, forKey: "WORD")
+            wordArray.append(wordDictionary)
+            saveData.setObject(wordArray, forKey: "WORD")
         
-        let alert = UIAlertController(title: "保存完了", message: "単語の登録が完了しました", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            let alert = UIAlertController(title: "保存完了", message: "単語の登録が完了しました", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         
-        self.presentViewController(alert, animated: true, completion: nil)
-        englishTextField.text = ""
-        japaneseTextField.text = ""
+            self.presentViewController(alert, animated: true, completion: nil)
+            englishTextField.text = ""
+            japaneseTextField.text = ""
+        }
     }
 
     /*

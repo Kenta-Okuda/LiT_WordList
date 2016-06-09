@@ -30,6 +30,7 @@ class QuestionViewController: UIViewController {
         wordArray = saveData.arrayForKey("WORD")!
         shuffle()
         questionLabel.text = shuffledWordArray[nowNumber]["english"] as? String
+print("viewWillAppear") //for debug
     }
     
     func shuffle() {
@@ -37,6 +38,7 @@ class QuestionViewController: UIViewController {
             let index = Int(rand()) % wordArray.count
             shuffledWordArray.append(wordArray[index])
             wordArray.removeAtIndex(index)
+print("shuffle") //for debug
         }
     }
     
